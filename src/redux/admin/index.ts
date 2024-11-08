@@ -1,32 +1,29 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { PAuth, Admin, AdminState, AuthResponse, PRegister } from './types.ts';
-import { BASE_URL } from '../../scripts/utils.ts';
-import { RootState } from '../../store.ts';
+import { PAuth, Admin, AdminState, AuthResponse, PRegister } from './types';
+import { BASE_URL } from '../../utils';
+import { RootState } from '../../store';
 
 // Дефолтные значения
 const initialState: AdminState = {
     admins: [],
     currentAdmin: {} as Admin,
-    isAuthenticated: !!localStorage.getItem('token'), 
+    isAuthenticated: !!localStorage.getItem('token'),
 };
 
 // Асинхронное действие для аутентификации администратора
-export const authAdmin = createAsyncThunk<AuthResponse, PAuth>(
-    'admin/auth',
-    async (payload: PAuth): Promise<AuthResponse> => {
-        const response = await axios.post(BASE_URL + '/admin/auth', payload);
+export const authAdmin = createAsyncThunk<AuthResponse, PAuth>('admin/auth', async (payload: PAuth): Promise<AuthResponse> => {
+    const response = await axios.post(BASE_URL + '/admin/auth', payload);
 
-        if (response?.data?.token) {
-            localStorage.setItem('token', response.data.token); 
-        }
-
-        return {
-            token: response.data.token,
-            admin: response.data.admin // Предполагается, что сервер возвращает объект admin
-        }; 
+    if (response?.data?.token) {
+        localStorage.setItem('token', response.data.token);
     }
-);
+
+    return {
+        token: response.data.token,
+        admin: response.data.admin, // Предполагается, что сервер возвращает объект admin
+    };
+});
 
 export const logoutAdmin = createAsyncThunk('admin/logout', async () => {
     localStorage.removeItem('token'); // Удаление токена
@@ -43,7 +40,6 @@ export const createAdmin = createAsyncThunk('admin/create', async (object: PRegi
     return response.data; // Убедитесь, что сервер возвращает все нужные данные
 });
 
-
 // Создание среза для управления состоянием администратора
 const adminSlice = createSlice({
     name: 'admin',
@@ -51,23 +47,23 @@ const adminSlice = createSlice({
     reducers: {
         // Здесь можно добавить обработчики действий, если это необходимо
     },
-    extraReducers: (builder) => {
+    extraReducers: builder => {
         builder
             .addCase(authAdmin.fulfilled, (state, action) => {
                 state.currentAdmin = action.payload.admin;
                 state.isAuthenticated = true; // Убедитесь, что isAuthenticated устанавливается в true
             })
-            .addCase(authAdmin.rejected, (state) => {
+            .addCase(authAdmin.rejected, state => {
                 state.isAuthenticated = false; // Устанавливаем isAuthenticated в false при ошибке
             })
             .addCase(createAdmin.fulfilled, (state, action) => {
                 state.admins.push(action.payload); // Добавляем нового администратора в список
                 state.currentAdmin = action.payload; // Обновляем текущего администратора
             })
-            .addCase(logoutAdmin.fulfilled, (state) => {
+            .addCase(logoutAdmin.fulfilled, state => {
                 state.isAuthenticated = false; // Сбрасываем состояние аутентификации state.currentAdmin = {} as Admin; // Сбрасываем текущего администратора
             });
-    }
+    },
 });
 
 // Экспорт редьюсера

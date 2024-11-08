@@ -1,7 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
-// import adminRoutes from './routes/adminRoutes.js';
+import adminRoutes from './routes/adminRoutes.js';
 import conectDb from './config/db.js';
 import env from 'dotenv';
 
@@ -19,7 +19,7 @@ const port = process.env.PORT_SERVER || 3001;
 
 conectDb();
 
-// app.use('/admin', adminRoutes);
+app.use('/admin', adminRoutes);
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);

@@ -1,16 +1,16 @@
-import React, { useState } from "react";
-import Popup from '../Popup/index.tsx'; 
+import React, { useState } from 'react';
+import Popup from '../Popup/index';
 
 const Footer = () => {
     const [isModalOpen, setModalOpen] = useState(false);
 
     const handleOpenModal = () => {
         setModalOpen(true);
-      };
-    
-      const handleCloseModal = () => {
+    };
+
+    const handleCloseModal = () => {
         setModalOpen(false);
-      };
+    };
 
     return (
         <>
@@ -20,65 +20,113 @@ const Footer = () => {
                         <div className="row mb-lg-5">
                             <div className="col-lg-4  d-none d-lg-block">
                                 <p>
-                                        ООО "ИМПЕРИАЛ"<br/>
-                                        Юридический адрес:<br/>
-                                        445030, Самарская область, г.о. Тольятти,<br/> 
-                                        г. Тольятти, ул. Тополиная, д. 38, кв. 78<br/>
-                                        ОГРН: 1236300033705<br/>
-                                        ИНН: 6320078134<br/>
-                                        КПП: 632001001<br/>
+                                    ООО "ИМПЕРИАЛ"
+                                    <br />
+                                    Юридический адрес:
+                                    <br />
+                                    445030, Самарская область, г.о. Тольятти,
+                                    <br />
+                                    г. Тольятти, ул. Тополиная, д. 38, кв. 78
+                                    <br />
+                                    ОГРН: 1236300033705
+                                    <br />
+                                    ИНН: 6320078134
+                                    <br />
+                                    КПП: 632001001
+                                    <br />
                                 </p>
-                                                </div>
+                            </div>
                             <div className="col-12 col-lg-4">
                                 <div className="footer__title col-auto mb-lg-3">
                                     <h2>КОНТАКТНАЯ ИНФОРМАЦИЯ</h2>
                                 </div>
                                 <div className="footer__address">
                                     <p>ОТДЕЛ ПРОДАЖ</p>
-                                    <span className="d-inline">Новосибирск, ул. Курчатова, д.2/2</span>                        <div className="contact-phone call_phone_1_1">
-                <a className="js-phone" href="tel:+73833229081"><span>+7 (383) 322-90-81</span></a>
-            </div>                    </div>
+                                    <span className="d-inline">Новосибирск, ул. Курчатова, д.2/2</span>{' '}
+                                    <div className="contact-phone call_phone_1_1">
+                                        <a className="js-phone" href="tel:+73833229081">
+                                            <span>+7 (383) 322-90-81</span>
+                                        </a>
+                                    </div>{' '}
+                                </div>
                             </div>
                             <div className="col-12 col-lg-4">
                                 <div className="footer__schedule">
                                     <p>ЧАСЫ РАБОТЫ</p>
-                                    <div className="footer__time">
-                                        09:00 - 21:00                        </div>
+                                    <div className="footer__time">09:00 - 21:00 </div>
                                 </div>
                             </div>
                         </div>
                         <div className="col-12 order-4 order-lg-2">
                             <div className="footer-small-text">
-                    <p>Обращаем ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положением ч. 2 ст. 437 Гражданского кодекса Российской Федерации.</p>
-                <p>Все персональные данные подлежат обработке в соответствии с политикой конфиденциальности и защищены Федеральным законом Российской Федерации от 27 июля 2006 г. № 152-ФЗ.</p>
-                <button type="button" className="footer-text-button collapsed" data-bs-toggle="collapse" data-bs-target="#footer-text" aria-expanded="true" aria-controls="footer-text">Подробнее</button>
-                <div className="footer-text-collapse collapse" id="footer-text">
-                    <p>АО «Т-Банк». Генеральная лицензия Банка России № 2673 от 11.04.2022 г.</p>
-                    <p>АО «Т-Страхование» лицензия СИ № 0191 от 19.05.2015 г.</p>
-                    <p>Процентная ставка по кредиту от 3,9% годовых на все марки. Сумма кредитования составляет от 50 000 руб. до 5 000 000 руб. Срок кредитования от 6 мес. до 7 лет. Первоначальный взнос по кредиту до 70%. Сумма ежемесячного платежа по кредиту на все марки авто составляет от 1 643 ₽ руб. до 228 247 ₽ руб., без комиссий. Кредит предоставляется при условии страхования жизни, а также ущерба угона. Финальная сумма будет озвучена менеджером после получения информации от банков.</p>
-                    <p>Пример расчета при покупке автомобиля в кредит: При покупке автомобиля стоимостью 1 949 000 руб., сроком кредита 7 лет и первом взносе 40% будут действовать следующие условия: сумма кредитования - 1 169 400 руб., ставка по кредиту - 3,9%, ежемесячный платеж - 15 931 руб., без дополнительных комиссий, с обязательным страхованием жизни и здоровья, а также ущерба угона.</p>
-                    <p>Пользователь данного интернет-ресурса обратившийся, через специальные формы связи, размещенные на данном сайте, а также посредством телефонного звонка, выражает свое безусловное согласие продолжить устную или письменную коммуникацию с помощью электронных средств связи, в т.ч.: sms-информирование, e-mail-рассылка и т.п. и т.д.</p>
-                </div>
-            </div>
+                                <p>
+                                    Обращаем ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер и ни при каких условиях
+                                    не является публичной офертой, определяемой положением ч. 2 ст. 437 Гражданского кодекса Российской Федерации.
+                                </p>
+                                <p>
+                                    Все персональные данные подлежат обработке в соответствии с политикой конфиденциальности и защищены Федеральным законом
+                                    Российской Федерации от 27 июля 2006 г. № 152-ФЗ.
+                                </p>
+                                <button
+                                    type="button"
+                                    className="footer-text-button collapsed"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#footer-text"
+                                    aria-expanded="true"
+                                    aria-controls="footer-text"
+                                >
+                                    Подробнее
+                                </button>
+                                <div className="footer-text-collapse collapse" id="footer-text">
+                                    <p>АО «Т-Банк». Генеральная лицензия Банка России № 2673 от 11.04.2022 г.</p>
+                                    <p>АО «Т-Страхование» лицензия СИ № 0191 от 19.05.2015 г.</p>
+                                    <p>
+                                        Процентная ставка по кредиту от 3,9% годовых на все марки. Сумма кредитования составляет от 50 000 руб. до 5 000 000
+                                        руб. Срок кредитования от 6 мес. до 7 лет. Первоначальный взнос по кредиту до 70%. Сумма ежемесячного платежа по кредиту
+                                        на все марки авто составляет от 1 643 ₽ руб. до 228 247 ₽ руб., без комиссий. Кредит предоставляется при условии
+                                        страхования жизни, а также ущерба угона. Финальная сумма будет озвучена менеджером после получения информации от банков.
+                                    </p>
+                                    <p>
+                                        Пример расчета при покупке автомобиля в кредит: При покупке автомобиля стоимостью 1 949 000 руб., сроком кредита 7 лет и
+                                        первом взносе 40% будут действовать следующие условия: сумма кредитования - 1 169 400 руб., ставка по кредиту - 3,9%,
+                                        ежемесячный платеж - 15 931 руб., без дополнительных комиссий, с обязательным страхованием жизни и здоровья, а также
+                                        ущерба угона.
+                                    </p>
+                                    <p>
+                                        Пользователь данного интернет-ресурса обратившийся, через специальные формы связи, размещенные на данном сайте, а также
+                                        посредством телефонного звонка, выражает свое безусловное согласие продолжить устную или письменную коммуникацию с
+                                        помощью электронных средств связи, в т.ч.: sms-информирование, e-mail-рассылка и т.п. и т.д.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
 
                         <div className="footer-links">
-                            <a href="#" data-popup="popup-agreement">Лицензионное соглашение</a>
-                            <a href="#" data-popup="popup-privacy-policy">Политика конфиденциальности</a>
+                            <a href="#" data-popup="popup-agreement">
+                                Лицензионное соглашение
+                            </a>
+                            <a href="#" data-popup="popup-privacy-policy">
+                                Политика конфиденциальности
+                            </a>
                         </div>
                     </div>
                 </div>
             </footer>
             <Popup isOpen={isModalOpen} onClose={handleCloseModal} />
-            <button type="button"  onClick={handleOpenModal} className="callback-link js-constructor-btn" title="Отправить заявку"
-                    data-name="Обратный звонок. Футер. В углу"
-                    data-title="Получить персональное предложение на покупку нового автомобиля!">
+            <button
+                type="button"
+                onClick={handleOpenModal}
+                className="callback-link js-constructor-btn"
+                title="Отправить заявку"
+                data-name="Обратный звонок. Футер. В углу"
+                data-title="Получить персональное предложение на покупку нового автомобиля!"
+            >
                 <span className="callback-link__inner">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="phone-call" width="24" height="24">
-                    <path d="M18 22C9.4 21.5 2.5 14.6 2 6.1 2 4.3 3.3 3 5 3h4c.4 0 .8.2.9.6l2 5c.2.5 0 1-.4 1.2l-1.7 1c.8 1.3 2 2.5 3.3 3.3l1-1.7c.3-.4.8-.6 1.2-.4l5 2c.4.2.6.5.6.9v4C21 20.7 19.7 22 18 22zM5 5c-.6 0-1 .4-1 1 .5 7.5 6.5 13.5 14.1 14 .5 0 .9-.5.9-1v-3.3l-3.6-1.4-1 1.7c-.3.4-.8.6-1.3.4-2.4-1.2-4.3-3.1-5.5-5.5-.2-.5-.1-1 .4-1.3l1.8-1.1L8.3 5H5z"/>
-                    <path d="M17 10c-.6 0-1-.4-1-1s-.4-1-1-1-1-.4-1-1 .4-1 1-1c1.7 0 3 1.3 3 3 0 .6-.4 1-1 1z"/>
-                    <path d="M21 10c-.6 0-1-.4-1-1 0-2.8-2.2-5-5-5-.6 0-1-.4-1-1s.4-1 1-1c3.9 0 7 3.1 7 7 0 .6-.4 1-1 1z"/>
-                </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="phone-call" width="24" height="24">
+                        <path d="M18 22C9.4 21.5 2.5 14.6 2 6.1 2 4.3 3.3 3 5 3h4c.4 0 .8.2.9.6l2 5c.2.5 0 1-.4 1.2l-1.7 1c.8 1.3 2 2.5 3.3 3.3l1-1.7c.3-.4.8-.6 1.2-.4l5 2c.4.2.6.5.6.9v4C21 20.7 19.7 22 18 22zM5 5c-.6 0-1 .4-1 1 .5 7.5 6.5 13.5 14.1 14 .5 0 .9-.5.9-1v-3.3l-3.6-1.4-1 1.7c-.3.4-.8.6-1.3.4-2.4-1.2-4.3-3.1-5.5-5.5-.2-.5-.1-1 .4-1.3l1.8-1.1L8.3 5H5z" />
+                        <path d="M17 10c-.6 0-1-.4-1-1s-.4-1-1-1-1-.4-1-1 .4-1 1-1c1.7 0 3 1.3 3 3 0 .6-.4 1-1 1z" />
+                        <path d="M21 10c-.6 0-1-.4-1-1 0-2.8-2.2-5-5-5-.6 0-1-.4-1-1s.4-1 1-1c3.9 0 7 3.1 7 7 0 .6-.4 1-1 1z" />
+                    </svg>
                 </span>
             </button>
 
@@ -459,619 +507,903 @@ const Footer = () => {
             </div> */}
 
             <div hidden>
-                        <div className="popup -short" id="stock-289345">
-                        <div className="popup__content">
-                            <div className="popup__title popup__title--small">Дополнительное оборудование</div>
-                            <div className="popup__text mb-3">Оставьте заявку, чтобы получить подробную информацию о предложении.</div>
-                            <form action="#" method="post" className="form needs-validation"
-                                data-analytics-form-id="stock-289345"
-                                noValidate autoComplete="off">
-                                <input type="hidden" name="name" value="Попап. Сток попап. "/>
-                                <input type="hidden" name="id" value=""/>
-                                <input type="hidden" name="property_mark"
-                                    value=""/>
-                                <input type="hidden" name="property_model"
-                                    value=""/>
-                                <div className="form-group">
-                                    <label htmlFor="stock-289345-phone" className="visually-hidden">Телефон</label>
-                                    <input className="form-control" required data-validate type="tel" autoComplete="off"
-                                        id="stock-289345-phone" name="property_phone" placeholder="+7"/>
+                <div className="popup -short" id="stock-289345">
+                    <div className="popup__content">
+                        <div className="popup__title popup__title--small">Дополнительное оборудование</div>
+                        <div className="popup__text mb-3">Оставьте заявку, чтобы получить подробную информацию о предложении.</div>
+                        <form action="#" method="post" className="form needs-validation" data-analytics-form-id="stock-289345" noValidate autoComplete="off">
+                            <input type="hidden" name="name" value="Попап. Сток попап. " />
+                            <input type="hidden" name="id" value="" />
+                            <input type="hidden" name="property_mark" value="" />
+                            <input type="hidden" name="property_model" value="" />
+                            <div className="form-group">
+                                <label htmlFor="stock-289345-phone" className="visually-hidden">
+                                    Телефон
+                                </label>
+                                <input
+                                    className="form-control"
+                                    required
+                                    data-validate
+                                    type="tel"
+                                    autoComplete="off"
+                                    id="stock-289345-phone"
+                                    name="property_phone"
+                                    placeholder="+7"
+                                />
+                            </div>
+                            <div className="form-group">
+                                <button className="btn btn-primary w-100" type="submit">
+                                    <span>Отправить заявку</span>
+                                </button>
+                            </div>
+                            <div className="form-comment">
+                                <div className="form-agreement">
+                                    Я даю согласие{' '}
+                                    <a href="#" data-popup="popup-agreement">
+                                        на обработку персональных данных
+                                    </a>{' '}
+                                    и принимаю
+                                    <a href="#" data-popup="popup-privacy-policy">
+                                        условия Политики конфиденциальности
+                                    </a>
                                 </div>
-                                <div className="form-group">
-                                    <button className="btn btn-primary w-100" type="submit"><span>Отправить заявку</span></button>
-                                </div>
-                                <div className="form-comment">
-                                    <div className="form-agreement">
-                Я даю согласие <a href="#" data-popup="popup-agreement">на обработку персональных данных</a> и принимаю
-                <a href="#" data-popup="popup-privacy-policy">условия Политики конфиденциальности</a>
-            </div>
-                                </div>
-                            </form>
-                        </div>
+                            </div>
+                        </form>
                     </div>
-                        <div className="popup -short" id="stock-289325">
-                        <div className="popup__content">
-                            <div className="popup__title popup__title--small">КАСКО в подарок</div>
-                            <div className="popup__text mb-3">Свяжитесь с нами, чтобы узнать подробности об акции.&nbsp;&nbsp;</div>
-                            <form action="#" method="post" className="form needs-validation"
-                                data-analytics-form-id="stock-289325"
-                                noValidate autoComplete="off">
-                                <input type="hidden" name="name" value="Попап. Сток попап. "/>
-                                <input type="hidden" name="id" value=""/>
-                                <input type="hidden" name="property_mark"
-                                    value=""/>
-                                <input type="hidden" name="property_model"
-                                    value=""/>
-                                <div className="form-group">
-                                    <label htmlFor="stock-289325-phone" className="visually-hidden">Телефон</label>
-                                    <input className="form-control" required data-validate type="tel" autoComplete="off"
-                                        id="stock-289325-phone" name="property_phone" placeholder="+7"/>
+                </div>
+                <div className="popup -short" id="stock-289325">
+                    <div className="popup__content">
+                        <div className="popup__title popup__title--small">КАСКО в подарок</div>
+                        <div className="popup__text mb-3">Свяжитесь с нами, чтобы узнать подробности об акции.&nbsp;&nbsp;</div>
+                        <form action="#" method="post" className="form needs-validation" data-analytics-form-id="stock-289325" noValidate autoComplete="off">
+                            <input type="hidden" name="name" value="Попап. Сток попап. " />
+                            <input type="hidden" name="id" value="" />
+                            <input type="hidden" name="property_mark" value="" />
+                            <input type="hidden" name="property_model" value="" />
+                            <div className="form-group">
+                                <label htmlFor="stock-289325-phone" className="visually-hidden">
+                                    Телефон
+                                </label>
+                                <input
+                                    className="form-control"
+                                    required
+                                    data-validate
+                                    type="tel"
+                                    autoComplete="off"
+                                    id="stock-289325-phone"
+                                    name="property_phone"
+                                    placeholder="+7"
+                                />
+                            </div>
+                            <div className="form-group">
+                                <button className="btn btn-primary w-100" type="submit">
+                                    <span>Отправить заявку</span>
+                                </button>
+                            </div>
+                            <div className="form-comment">
+                                <div className="form-agreement">
+                                    Я даю согласие{' '}
+                                    <a href="#" data-popup="popup-agreement">
+                                        на обработку персональных данных
+                                    </a>{' '}
+                                    и принимаю
+                                    <a href="#" data-popup="popup-privacy-policy">
+                                        условия Политики конфиденциальности
+                                    </a>
                                 </div>
-                                <div className="form-group">
-                                    <button className="btn btn-primary w-100" type="submit"><span>Отправить заявку</span></button>
-                                </div>
-                                <div className="form-comment">
-                                    <div className="form-agreement">
-                Я даю согласие <a href="#" data-popup="popup-agreement">на обработку персональных данных</a> и принимаю
-                <a href="#" data-popup="popup-privacy-policy">условия Политики конфиденциальности</a>
-            </div>
-                                </div>
-                            </form>
-                        </div>
+                            </div>
+                        </form>
                     </div>
-                        <div className="popup -short" id="stock-287912">
-                        <div className="popup__content">
-                            <div className="popup__title popup__title--small">Принять участие в розыгрыше</div>
-                            <div className="popup__text mb-3">В честь юбилея мы разыгрываем множество ценных призов, спешите испытать свою удачу и побороться за незаменимые подарки.</div>
-                            <form action="#" method="post" className="form needs-validation"
-                                data-analytics-form-id="stock-287912"
-                                noValidate autoComplete="off">
-                                <input type="hidden" name="name" value="Попап. Сток попап. "/>
-                                <input type="hidden" name="id" value=""/>
-                                <input type="hidden" name="property_mark"
-                                    value=""/>
-                                <input type="hidden" name="property_model"
-                                    value=""/>
-                                <div className="form-group">
-                                    <label htmlFor="stock-287912-phone" className="visually-hidden">Телефон</label>
-                                    <input className="form-control" required data-validate type="tel" autoComplete="off"
-                                        id="stock-287912-phone" name="property_phone" placeholder="+7"/>
-                                </div>
-                                <div className="form-group">
-                                    <button className="btn btn-primary w-100" type="submit"><span>Отправить заявку</span></button>
-                                </div>
-                                <div className="form-comment">
-                                    <div className="form-agreement">
-                Я даю согласие <a href="#" data-popup="popup-agreement">на обработку персональных данных</a> и принимаю
-                <a href="#" data-popup="popup-privacy-policy">условия Политики конфиденциальности</a>
-            </div>
-                                </div>
-                            </form>
+                </div>
+                <div className="popup -short" id="stock-287912">
+                    <div className="popup__content">
+                        <div className="popup__title popup__title--small">Принять участие в розыгрыше</div>
+                        <div className="popup__text mb-3">
+                            В честь юбилея мы разыгрываем множество ценных призов, спешите испытать свою удачу и побороться за незаменимые подарки.
                         </div>
+                        <form action="#" method="post" className="form needs-validation" data-analytics-form-id="stock-287912" noValidate autoComplete="off">
+                            <input type="hidden" name="name" value="Попап. Сток попап. " />
+                            <input type="hidden" name="id" value="" />
+                            <input type="hidden" name="property_mark" value="" />
+                            <input type="hidden" name="property_model" value="" />
+                            <div className="form-group">
+                                <label htmlFor="stock-287912-phone" className="visually-hidden">
+                                    Телефон
+                                </label>
+                                <input
+                                    className="form-control"
+                                    required
+                                    data-validate
+                                    type="tel"
+                                    autoComplete="off"
+                                    id="stock-287912-phone"
+                                    name="property_phone"
+                                    placeholder="+7"
+                                />
+                            </div>
+                            <div className="form-group">
+                                <button className="btn btn-primary w-100" type="submit">
+                                    <span>Отправить заявку</span>
+                                </button>
+                            </div>
+                            <div className="form-comment">
+                                <div className="form-agreement">
+                                    Я даю согласие{' '}
+                                    <a href="#" data-popup="popup-agreement">
+                                        на обработку персональных данных
+                                    </a>{' '}
+                                    и принимаю
+                                    <a href="#" data-popup="popup-privacy-policy">
+                                        условия Политики конфиденциальности
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                        <div className="popup -short" id="stock-283321">
-                        <div className="popup__content">
-                            <div className="popup__title popup__title--small">Получить подарок по акции!</div>
-                            <div className="popup__text mb-3">При покупке автомобиля вы гарантированно получите хороший подарок. Предложение действует только в акционные дни.</div>
-                            <form action="#" method="post" className="form needs-validation"
-                                data-analytics-form-id="stock-283321"
-                                noValidate autoComplete="off">
-                                <input type="hidden" name="name" value="Попап. Сток попап. "/>
-                                <input type="hidden" name="id" value=""/>
-                                <input type="hidden" name="property_mark"
-                                    value=""/>
-                                <input type="hidden" name="property_model"
-                                    value=""/>
-                                <div className="form-group">
-                                    <label htmlFor="stock-283321-phone" className="visually-hidden">Телефон</label>
-                                    <input className="form-control" required data-validate type="tel" autoComplete="off"
-                                        id="stock-283321-phone" name="property_phone" placeholder="+7"/>
-                                </div>
-                                <div className="form-group">
-                                    <button className="btn btn-primary w-100" type="submit"><span>Отправить заявку</span></button>
-                                </div>
-                                <div className="form-comment">
-                                    <div className="form-agreement">
-                Я даю согласие <a href="#" data-popup="popup-agreement">на обработку персональных данных</a> и принимаю
-                <a href="#" data-popup="popup-privacy-policy">условия Политики конфиденциальности</a>
-            </div>
-                                </div>
-                            </form>
+                </div>
+                <div className="popup -short" id="stock-283321">
+                    <div className="popup__content">
+                        <div className="popup__title popup__title--small">Получить подарок по акции!</div>
+                        <div className="popup__text mb-3">
+                            При покупке автомобиля вы гарантированно получите хороший подарок. Предложение действует только в акционные дни.
                         </div>
+                        <form action="#" method="post" className="form needs-validation" data-analytics-form-id="stock-283321" noValidate autoComplete="off">
+                            <input type="hidden" name="name" value="Попап. Сток попап. " />
+                            <input type="hidden" name="id" value="" />
+                            <input type="hidden" name="property_mark" value="" />
+                            <input type="hidden" name="property_model" value="" />
+                            <div className="form-group">
+                                <label htmlFor="stock-283321-phone" className="visually-hidden">
+                                    Телефон
+                                </label>
+                                <input
+                                    className="form-control"
+                                    required
+                                    data-validate
+                                    type="tel"
+                                    autoComplete="off"
+                                    id="stock-283321-phone"
+                                    name="property_phone"
+                                    placeholder="+7"
+                                />
+                            </div>
+                            <div className="form-group">
+                                <button className="btn btn-primary w-100" type="submit">
+                                    <span>Отправить заявку</span>
+                                </button>
+                            </div>
+                            <div className="form-comment">
+                                <div className="form-agreement">
+                                    Я даю согласие{' '}
+                                    <a href="#" data-popup="popup-agreement">
+                                        на обработку персональных данных
+                                    </a>{' '}
+                                    и принимаю
+                                    <a href="#" data-popup="popup-privacy-policy">
+                                        условия Политики конфиденциальности
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                        <div className="popup -short" id="stock-281960">
-                        <div className="popup__content">
-                            <div className="popup__title popup__title--small">Оставьте заявку</div>
-                            <div className="popup__text mb-3">Наши менеджеры свяжутся с Вами в ближайшее время.
-            </div>
-                            <form action="#" method="post" className="form needs-validation"
-                                data-analytics-form-id="stock-281960"
-                                noValidate autoComplete="off">
-                                <input type="hidden" name="name" value="Попап. Сток попап. "/>
-                                <input type="hidden" name="id" value=""/>
-                                <input type="hidden" name="property_mark"
-                                    value=""/>
-                                <input type="hidden" name="property_model"
-                                    value=""/>
-                                <div className="form-group">
-                                    <label htmlFor="stock-281960-phone" className="visually-hidden">Телефон</label>
-                                    <input className="form-control" required data-validate type="tel" autoComplete="off"
-                                        id="stock-281960-phone" name="property_phone" placeholder="+7"/>
+                </div>
+                <div className="popup -short" id="stock-281960">
+                    <div className="popup__content">
+                        <div className="popup__title popup__title--small">Оставьте заявку</div>
+                        <div className="popup__text mb-3">Наши менеджеры свяжутся с Вами в ближайшее время.</div>
+                        <form action="#" method="post" className="form needs-validation" data-analytics-form-id="stock-281960" noValidate autoComplete="off">
+                            <input type="hidden" name="name" value="Попап. Сток попап. " />
+                            <input type="hidden" name="id" value="" />
+                            <input type="hidden" name="property_mark" value="" />
+                            <input type="hidden" name="property_model" value="" />
+                            <div className="form-group">
+                                <label htmlFor="stock-281960-phone" className="visually-hidden">
+                                    Телефон
+                                </label>
+                                <input
+                                    className="form-control"
+                                    required
+                                    data-validate
+                                    type="tel"
+                                    autoComplete="off"
+                                    id="stock-281960-phone"
+                                    name="property_phone"
+                                    placeholder="+7"
+                                />
+                            </div>
+                            <div className="form-group">
+                                <button className="btn btn-primary w-100" type="submit">
+                                    <span>Отправить заявку</span>
+                                </button>
+                            </div>
+                            <div className="form-comment">
+                                <div className="form-agreement">
+                                    Я даю согласие{' '}
+                                    <a href="#" data-popup="popup-agreement">
+                                        на обработку персональных данных
+                                    </a>{' '}
+                                    и принимаю
+                                    <a href="#" data-popup="popup-privacy-policy">
+                                        условия Политики конфиденциальности
+                                    </a>
                                 </div>
-                                <div className="form-group">
-                                    <button className="btn btn-primary w-100" type="submit"><span>Отправить заявку</span></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div className="popup -short" id="stock-248407">
+                    <div className="popup__content">
+                        <div className="popup__title popup__title--small">Дарим КАСКО!</div>
+                        <div className="popup__text mb-3">Чтобы узнать подробности этого предложения - оставьте заявку и мы перезвоним.</div>
+                        <form action="#" method="post" className="form needs-validation" data-analytics-form-id="stock-248407" noValidate autoComplete="off">
+                            <input type="hidden" name="name" value="Попап. Сток попап. " />
+                            <input type="hidden" name="id" value="" />
+                            <input type="hidden" name="property_mark" value="" />
+                            <input type="hidden" name="property_model" value="" />
+                            <div className="form-group">
+                                <label htmlFor="stock-248407-phone" className="visually-hidden">
+                                    Телефон
+                                </label>
+                                <input
+                                    className="form-control"
+                                    required
+                                    data-validate
+                                    type="tel"
+                                    autoComplete="off"
+                                    id="stock-248407-phone"
+                                    name="property_phone"
+                                    placeholder="+7"
+                                />
+                            </div>
+                            <div className="form-group">
+                                <button className="btn btn-primary w-100" type="submit">
+                                    <span>Отправить заявку</span>
+                                </button>
+                            </div>
+                            <div className="form-comment">
+                                <div className="form-agreement">
+                                    Я даю согласие{' '}
+                                    <a href="#" data-popup="popup-agreement">
+                                        на обработку персональных данных
+                                    </a>{' '}
+                                    и принимаю
+                                    <a href="#" data-popup="popup-privacy-policy">
+                                        условия Политики конфиденциальности
+                                    </a>
                                 </div>
-                                <div className="form-comment">
-                                    <div className="form-agreement">
-                Я даю согласие <a href="#" data-popup="popup-agreement">на обработку персональных данных</a> и принимаю
-                <a href="#" data-popup="popup-privacy-policy">условия Политики конфиденциальности</a>
-            </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div className="popup -short" id="stock-248404">
+                    <div className="popup__content">
+                        <div className="popup__title popup__title--small">Госпрограмма автокредитования!</div>
+                        <div className="popup__text mb-3">Оставьте заявку и получите скидку на авто 20&#37;!</div>
+                        <form action="#" method="post" className="form needs-validation" data-analytics-form-id="stock-248404" noValidate autoComplete="off">
+                            <input type="hidden" name="name" value="Попап. Сток попап. " />
+                            <input type="hidden" name="id" value="" />
+                            <input type="hidden" name="property_mark" value="" />
+                            <input type="hidden" name="property_model" value="" />
+                            <div className="form-group">
+                                <label htmlFor="stock-248404-phone" className="visually-hidden">
+                                    Телефон
+                                </label>
+                                <input
+                                    className="form-control"
+                                    required
+                                    data-validate
+                                    type="tel"
+                                    autoComplete="off"
+                                    id="stock-248404-phone"
+                                    name="property_phone"
+                                    placeholder="+7"
+                                />
+                            </div>
+                            <div className="form-group">
+                                <button className="btn btn-primary w-100" type="submit">
+                                    <span>Отправить заявку</span>
+                                </button>
+                            </div>
+                            <div className="form-comment">
+                                <div className="form-agreement">
+                                    Я даю согласие{' '}
+                                    <a href="#" data-popup="popup-agreement">
+                                        на обработку персональных данных
+                                    </a>{' '}
+                                    и принимаю
+                                    <a href="#" data-popup="popup-privacy-policy">
+                                        условия Политики конфиденциальности
+                                    </a>
                                 </div>
-                            </form>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div className="popup -short" id="stock-248402">
+                    <div className="popup__content">
+                        <div className="popup__title popup__title--small">Только до конца месяца!</div>
+                        <div className="popup__text mb-3">Дополнительная скидка на любой автомобиль LADA до 300 000 руб.!</div>
+                        <form action="#" method="post" className="form needs-validation" data-analytics-form-id="stock-248402" noValidate autoComplete="off">
+                            <input type="hidden" name="name" value="Попап. Сток попап. " />
+                            <input type="hidden" name="id" value="" />
+                            <input type="hidden" name="property_mark" value="" />
+                            <input type="hidden" name="property_model" value="" />
+                            <div className="form-group">
+                                <label htmlFor="stock-248402-phone" className="visually-hidden">
+                                    Телефон
+                                </label>
+                                <input
+                                    className="form-control"
+                                    required
+                                    data-validate
+                                    type="tel"
+                                    autoComplete="off"
+                                    id="stock-248402-phone"
+                                    name="property_phone"
+                                    placeholder="+7"
+                                />
+                            </div>
+                            <div className="form-group">
+                                <button className="btn btn-primary w-100" type="submit">
+                                    <span>Отправить заявку</span>
+                                </button>
+                            </div>
+                            <div className="form-comment">
+                                <div className="form-agreement">
+                                    Я даю согласие{' '}
+                                    <a href="#" data-popup="popup-agreement">
+                                        на обработку персональных данных
+                                    </a>{' '}
+                                    и принимаю
+                                    <a href="#" data-popup="popup-privacy-policy">
+                                        условия Политики конфиденциальности
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div className="popup -short" id="stock-215528">
+                    <div className="popup__content">
+                        <div className="popup__title popup__title--small">С Днем защитника Отечества!</div>
+                        <div className="popup__text mb-3">Дополнительные скидки и подарки всем мужчинам к празднику!</div>
+                        <form action="#" method="post" className="form needs-validation" data-analytics-form-id="stock-215528" noValidate autoComplete="off">
+                            <input type="hidden" name="name" value="Попап. Сток попап. " />
+                            <input type="hidden" name="id" value="" />
+                            <input type="hidden" name="property_mark" value="" />
+                            <input type="hidden" name="property_model" value="" />
+                            <div className="form-group">
+                                <label htmlFor="stock-215528-phone" className="visually-hidden">
+                                    Телефон
+                                </label>
+                                <input
+                                    className="form-control"
+                                    required
+                                    data-validate
+                                    type="tel"
+                                    autoComplete="off"
+                                    id="stock-215528-phone"
+                                    name="property_phone"
+                                    placeholder="+7"
+                                />
+                            </div>
+                            <div className="form-group">
+                                <button className="btn btn-primary w-100" type="submit">
+                                    <span>Отправить заявку</span>
+                                </button>
+                            </div>
+                            <div className="form-comment">
+                                <div className="form-agreement">
+                                    Я даю согласие{' '}
+                                    <a href="#" data-popup="popup-agreement">
+                                        на обработку персональных данных
+                                    </a>{' '}
+                                    и принимаю
+                                    <a href="#" data-popup="popup-privacy-policy">
+                                        условия Политики конфиденциальности
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div className="popup -short" id="stock-212571">
+                    <div className="popup__content">
+                        <div className="popup__title popup__title--small">Автокредитование по государственным программам!</div>
+                        <div className="popup__text mb-3">У нас можно купить автомобиль с поддержкой государства.</div>
+                        <form action="#" method="post" className="form needs-validation" data-analytics-form-id="stock-212571" noValidate autoComplete="off">
+                            <input type="hidden" name="name" value="Попап. Сток попап. " />
+                            <input type="hidden" name="id" value="" />
+                            <input type="hidden" name="property_mark" value="" />
+                            <input type="hidden" name="property_model" value="" />
+                            <div className="form-group">
+                                <label htmlFor="stock-212571-phone" className="visually-hidden">
+                                    Телефон
+                                </label>
+                                <input
+                                    className="form-control"
+                                    required
+                                    data-validate
+                                    type="tel"
+                                    autoComplete="off"
+                                    id="stock-212571-phone"
+                                    name="property_phone"
+                                    placeholder="+7"
+                                />
+                            </div>
+                            <div className="form-group">
+                                <button className="btn btn-primary w-100" type="submit">
+                                    <span>Отправить заявку</span>
+                                </button>
+                            </div>
+                            <div className="form-comment">
+                                <div className="form-agreement">
+                                    Я даю согласие{' '}
+                                    <a href="#" data-popup="popup-agreement">
+                                        на обработку персональных данных
+                                    </a>{' '}
+                                    и принимаю
+                                    <a href="#" data-popup="popup-privacy-policy">
+                                        условия Политики конфиденциальности
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div className="popup -short" id="stock-212569">
+                    <div className="popup__content">
+                        <div className="popup__title popup__title--small">Специальное предложение!</div>
+                        <div className="popup__text mb-3">Успейте купить новый автомобиль по максимально низкой цене.</div>
+                        <form action="#" method="post" className="form needs-validation" data-analytics-form-id="stock-212569" noValidate autoComplete="off">
+                            <input type="hidden" name="name" value="Попап. Сток попап. " />
+                            <input type="hidden" name="id" value="" />
+                            <input type="hidden" name="property_mark" value="" />
+                            <input type="hidden" name="property_model" value="" />
+                            <div className="form-group">
+                                <label htmlFor="stock-212569-phone" className="visually-hidden">
+                                    Телефон
+                                </label>
+                                <input
+                                    className="form-control"
+                                    required
+                                    data-validate
+                                    type="tel"
+                                    autoComplete="off"
+                                    id="stock-212569-phone"
+                                    name="property_phone"
+                                    placeholder="+7"
+                                />
+                            </div>
+                            <div className="form-group">
+                                <button className="btn btn-primary w-100" type="submit">
+                                    <span>Отправить заявку</span>
+                                </button>
+                            </div>
+                            <div className="form-comment">
+                                <div className="form-agreement">
+                                    Я даю согласие{' '}
+                                    <a href="#" data-popup="popup-agreement">
+                                        на обработку персональных данных
+                                    </a>{' '}
+                                    и принимаю
+                                    <a href="#" data-popup="popup-privacy-policy">
+                                        условия Политики конфиденциальности
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div className="popup -short" id="stock-212568">
+                    <div className="popup__content">
+                        <div className="popup__title popup__title--small">Мы открылись!</div>
+                        <div className="popup__text mb-3">
+                            Только сейчас! В честь открытия мы дарим подарки:
+                            <ul>
+                                <li>видеорегистратор,</li>
+                                <li>аудиосистему,</li>
+                                <li>парктроники,</li>
+                                <li>коврики!</li>
+                            </ul>
                         </div>
+                        <form action="#" method="post" className="form needs-validation" data-analytics-form-id="stock-212568" noValidate autoComplete="off">
+                            <input type="hidden" name="name" value="Попап. Сток попап. " />
+                            <input type="hidden" name="id" value="" />
+                            <input type="hidden" name="property_mark" value="" />
+                            <input type="hidden" name="property_model" value="" />
+                            <div className="form-group">
+                                <label htmlFor="stock-212568-phone" className="visually-hidden">
+                                    Телефон
+                                </label>
+                                <input
+                                    className="form-control"
+                                    required
+                                    data-validate
+                                    type="tel"
+                                    autoComplete="off"
+                                    id="stock-212568-phone"
+                                    name="property_phone"
+                                    placeholder="+7"
+                                />
+                            </div>
+                            <div className="form-group">
+                                <button className="btn btn-primary w-100" type="submit">
+                                    <span>Отправить заявку</span>
+                                </button>
+                            </div>
+                            <div className="form-comment">
+                                <div className="form-agreement">
+                                    Я даю согласие{' '}
+                                    <a href="#" data-popup="popup-agreement">
+                                        на обработку персональных данных
+                                    </a>{' '}
+                                    и принимаю
+                                    <a href="#" data-popup="popup-privacy-policy">
+                                        условия Политики конфиденциальности
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                        <div className="popup -short" id="stock-248407">
-                        <div className="popup__content">
-                            <div className="popup__title popup__title--small">Дарим КАСКО!</div>
-                            <div className="popup__text mb-3">Чтобы узнать подробности этого предложения - оставьте заявку и мы перезвоним.</div>
-                            <form action="#" method="post" className="form needs-validation"
-                                data-analytics-form-id="stock-248407"
-                                noValidate autoComplete="off">
-                                <input type="hidden" name="name" value="Попап. Сток попап. "/>
-                                <input type="hidden" name="id" value=""/>
-                                <input type="hidden" name="property_mark"
-                                    value=""/>
-                                <input type="hidden" name="property_model"
-                                    value=""/>
-                                <div className="form-group">
-                                    <label htmlFor="stock-248407-phone" className="visually-hidden">Телефон</label>
-                                    <input className="form-control" required data-validate type="tel" autoComplete="off"
-                                        id="stock-248407-phone" name="property_phone" placeholder="+7"/>
+                </div>
+                <div className="popup -short" id="stock-205771">
+                    <div className="popup__content">
+                        <div className="popup__title popup__title--small">Большой выбор автомобилей в наличии</div>
+                        <div className="popup__text mb-3">Дополнительная выгода при покупке в этом месяце, оставьте заявку и узнайте подробности акции.</div>
+                        <form action="#" method="post" className="form needs-validation" data-analytics-form-id="stock-205771" noValidate autoComplete="off">
+                            <input type="hidden" name="name" value="Попап. Сток попап. " />
+                            <input type="hidden" name="id" value="" />
+                            <input type="hidden" name="property_mark" value="" />
+                            <input type="hidden" name="property_model" value="" />
+                            <div className="form-group">
+                                <label htmlFor="stock-205771-phone" className="visually-hidden">
+                                    Телефон
+                                </label>
+                                <input
+                                    className="form-control"
+                                    required
+                                    data-validate
+                                    type="tel"
+                                    autoComplete="off"
+                                    id="stock-205771-phone"
+                                    name="property_phone"
+                                    placeholder="+7"
+                                />
+                            </div>
+                            <div className="form-group">
+                                <button className="btn btn-primary w-100" type="submit">
+                                    <span>Отправить заявку</span>
+                                </button>
+                            </div>
+                            <div className="form-comment">
+                                <div className="form-agreement">
+                                    Я даю согласие{' '}
+                                    <a href="#" data-popup="popup-agreement">
+                                        на обработку персональных данных
+                                    </a>{' '}
+                                    и принимаю
+                                    <a href="#" data-popup="popup-privacy-policy">
+                                        условия Политики конфиденциальности
+                                    </a>
                                 </div>
-                                <div className="form-group">
-                                    <button className="btn btn-primary w-100" type="submit"><span>Отправить заявку</span></button>
-                                </div>
-                                <div className="form-comment">
-                                    <div className="form-agreement">
-                Я даю согласие <a href="#" data-popup="popup-agreement">на обработку персональных данных</a> и принимаю
-                <a href="#" data-popup="popup-privacy-policy">условия Политики конфиденциальности</a>
-            </div>
-                                </div>
-                            </form>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div className="popup -short" id="stock-205731">
+                    <div className="popup__content">
+                        <div className="popup__title popup__title--small">Оставьте заявку</div>
+                        <div className="popup__text mb-3">
+                            <p>Наши менеджеры свяжутся с Вами в ближайшее время!</p>
                         </div>
+                        <form action="#" method="post" className="form needs-validation" data-analytics-form-id="stock-205731" noValidate autoComplete="off">
+                            <input type="hidden" name="name" value="Попап. Сток попап. " />
+                            <input type="hidden" name="id" value="" />
+                            <input type="hidden" name="property_mark" value="" />
+                            <input type="hidden" name="property_model" value="" />
+                            <div className="form-group">
+                                <label htmlFor="stock-205731-phone" className="visually-hidden">
+                                    Телефон
+                                </label>
+                                <input
+                                    className="form-control"
+                                    required
+                                    data-validate
+                                    type="tel"
+                                    autoComplete="off"
+                                    id="stock-205731-phone"
+                                    name="property_phone"
+                                    placeholder="+7"
+                                />
+                            </div>
+                            <div className="form-group">
+                                <button className="btn btn-primary w-100" type="submit">
+                                    <span>Отправить заявку</span>
+                                </button>
+                            </div>
+                            <div className="form-comment">
+                                <div className="form-agreement">
+                                    Я даю согласие{' '}
+                                    <a href="#" data-popup="popup-agreement">
+                                        на обработку персональных данных
+                                    </a>{' '}
+                                    и принимаю
+                                    <a href="#" data-popup="popup-privacy-policy">
+                                        условия Политики конфиденциальности
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                        <div className="popup -short" id="stock-248404">
-                        <div className="popup__content">
-                            <div className="popup__title popup__title--small">Госпрограмма автокредитования!</div>
-                            <div className="popup__text mb-3">Оставьте заявку и получите скидку на авто 20&#37;!</div>
-                            <form action="#" method="post" className="form needs-validation"
-                                data-analytics-form-id="stock-248404"
-                                noValidate autoComplete="off">
-                                <input type="hidden" name="name" value="Попап. Сток попап. "/>
-                                <input type="hidden" name="id" value=""/>
-                                <input type="hidden" name="property_mark"
-                                    value=""/>
-                                <input type="hidden" name="property_model"
-                                    value=""/>
-                                <div className="form-group">
-                                    <label htmlFor="stock-248404-phone" className="visually-hidden">Телефон</label>
-                                    <input className="form-control" required data-validate type="tel" autoComplete="off"
-                                        id="stock-248404-phone" name="property_phone" placeholder="+7"/>
+                </div>
+                <div className="popup -short" id="stock-203507">
+                    <div className="popup__content">
+                        <div className="popup__title popup__title--small">Дарим подарки!</div>
+                        <div className="popup__text mb-3">Топливная карта и другие подарки при покупки в этом месяце.</div>
+                        <form action="#" method="post" className="form needs-validation" data-analytics-form-id="stock-203507" noValidate autoComplete="off">
+                            <input type="hidden" name="name" value="Попап. Сток попап. " />
+                            <input type="hidden" name="id" value="" />
+                            <input type="hidden" name="property_mark" value="" />
+                            <input type="hidden" name="property_model" value="" />
+                            <div className="form-group">
+                                <label htmlFor="stock-203507-phone" className="visually-hidden">
+                                    Телефон
+                                </label>
+                                <input
+                                    className="form-control"
+                                    required
+                                    data-validate
+                                    type="tel"
+                                    autoComplete="off"
+                                    id="stock-203507-phone"
+                                    name="property_phone"
+                                    placeholder="+7"
+                                />
+                            </div>
+                            <div className="form-group">
+                                <button className="btn btn-primary w-100" type="submit">
+                                    <span>Отправить заявку</span>
+                                </button>
+                            </div>
+                            <div className="form-comment">
+                                <div className="form-agreement">
+                                    Я даю согласие{' '}
+                                    <a href="#" data-popup="popup-agreement">
+                                        на обработку персональных данных
+                                    </a>{' '}
+                                    и принимаю
+                                    <a href="#" data-popup="popup-privacy-policy">
+                                        условия Политики конфиденциальности
+                                    </a>
                                 </div>
-                                <div className="form-group">
-                                    <button className="btn btn-primary w-100" type="submit"><span>Отправить заявку</span></button>
-                                </div>
-                                <div className="form-comment">
-                                    <div className="form-agreement">
-                Я даю согласие <a href="#" data-popup="popup-agreement">на обработку персональных данных</a> и принимаю
-                <a href="#" data-popup="popup-privacy-policy">условия Политики конфиденциальности</a>
-            </div>
-                                </div>
-                            </form>
-                        </div>
+                            </div>
+                        </form>
                     </div>
-                        <div className="popup -short" id="stock-248402">
-                        <div className="popup__content">
-                            <div className="popup__title popup__title--small">Только до конца месяца!</div>
-                            <div className="popup__text mb-3">Дополнительная скидка на любой автомобиль LADA до 300 000 руб.!</div>
-                            <form action="#" method="post" className="form needs-validation"
-                                data-analytics-form-id="stock-248402"
-                                noValidate autoComplete="off">
-                                <input type="hidden" name="name" value="Попап. Сток попап. "/>
-                                <input type="hidden" name="id" value=""/>
-                                <input type="hidden" name="property_mark"
-                                    value=""/>
-                                <input type="hidden" name="property_model"
-                                    value=""/>
-                                <div className="form-group">
-                                    <label htmlFor="stock-248402-phone" className="visually-hidden">Телефон</label>
-                                    <input className="form-control" required data-validate type="tel" autoComplete="off"
-                                        id="stock-248402-phone" name="property_phone" placeholder="+7"/>
+                </div>
+                <div className="popup -short" id="stock-203504">
+                    <div className="popup__content">
+                        <div className="popup__title popup__title--small">Заявка на скидку</div>
+                        <div className="popup__text mb-3">заполните форму и получите дополнительную скидку при покупке авто</div>
+                        <form action="#" method="post" className="form needs-validation" data-analytics-form-id="stock-203504" noValidate autoComplete="off">
+                            <input type="hidden" name="name" value="Попап. Сток попап. " />
+                            <input type="hidden" name="id" value="" />
+                            <input type="hidden" name="property_mark" value="" />
+                            <input type="hidden" name="property_model" value="" />
+                            <div className="form-group">
+                                <label htmlFor="stock-203504-phone" className="visually-hidden">
+                                    Телефон
+                                </label>
+                                <input
+                                    className="form-control"
+                                    required
+                                    data-validate
+                                    type="tel"
+                                    autoComplete="off"
+                                    id="stock-203504-phone"
+                                    name="property_phone"
+                                    placeholder="+7"
+                                />
+                            </div>
+                            <div className="form-group">
+                                <button className="btn btn-primary w-100" type="submit">
+                                    <span>Отправить заявку</span>
+                                </button>
+                            </div>
+                            <div className="form-comment">
+                                <div className="form-agreement">
+                                    Я даю согласие{' '}
+                                    <a href="#" data-popup="popup-agreement">
+                                        на обработку персональных данных
+                                    </a>{' '}
+                                    и принимаю
+                                    <a href="#" data-popup="popup-privacy-policy">
+                                        условия Политики конфиденциальности
+                                    </a>
                                 </div>
-                                <div className="form-group">
-                                    <button className="btn btn-primary w-100" type="submit"><span>Отправить заявку</span></button>
-                                </div>
-                                <div className="form-comment">
-                                    <div className="form-agreement">
-                Я даю согласие <a href="#" data-popup="popup-agreement">на обработку персональных данных</a> и принимаю
-                <a href="#" data-popup="popup-privacy-policy">условия Политики конфиденциальности</a>
-            </div>
-                                </div>
-                            </form>
-                        </div>
+                            </div>
+                        </form>
                     </div>
-                        <div className="popup -short" id="stock-215528">
-                        <div className="popup__content">
-                            <div className="popup__title popup__title--small">С Днем защитника Отечества!</div>
-                            <div className="popup__text mb-3">Дополнительные скидки и подарки всем мужчинам к празднику!</div>
-                            <form action="#" method="post" className="form needs-validation"
-                                data-analytics-form-id="stock-215528"
-                                noValidate autoComplete="off">
-                                <input type="hidden" name="name" value="Попап. Сток попап. "/>
-                                <input type="hidden" name="id" value=""/>
-                                <input type="hidden" name="property_mark"
-                                    value=""/>
-                                <input type="hidden" name="property_model"
-                                    value=""/>
-                                <div className="form-group">
-                                    <label htmlFor="stock-215528-phone" className="visually-hidden">Телефон</label>
-                                    <input className="form-control" required data-validate type="tel" autoComplete="off"
-                                        id="stock-215528-phone" name="property_phone" placeholder="+7"/>
+                </div>
+                <div className="popup -short" id="stock-202700">
+                    <div className="popup__content">
+                        <div className="popup__title popup__title--small">Дни максимальных скидок!</div>
+                        <div className="popup__text mb-3">Выгода до 850 тыс.руб. и другие подарки</div>
+                        <form action="#" method="post" className="form needs-validation" data-analytics-form-id="stock-202700" noValidate autoComplete="off">
+                            <input type="hidden" name="name" value="Попап. Сток попап. " />
+                            <input type="hidden" name="id" value="" />
+                            <input type="hidden" name="property_mark" value="" />
+                            <input type="hidden" name="property_model" value="" />
+                            <div className="form-group">
+                                <label htmlFor="stock-202700-phone" className="visually-hidden">
+                                    Телефон
+                                </label>
+                                <input
+                                    className="form-control"
+                                    required
+                                    data-validate
+                                    type="tel"
+                                    autoComplete="off"
+                                    id="stock-202700-phone"
+                                    name="property_phone"
+                                    placeholder="+7"
+                                />
+                            </div>
+                            <div className="form-group">
+                                <button className="btn btn-primary w-100" type="submit">
+                                    <span>Отправить заявку</span>
+                                </button>
+                            </div>
+                            <div className="form-comment">
+                                <div className="form-agreement">
+                                    Я даю согласие{' '}
+                                    <a href="#" data-popup="popup-agreement">
+                                        на обработку персональных данных
+                                    </a>{' '}
+                                    и принимаю
+                                    <a href="#" data-popup="popup-privacy-policy">
+                                        условия Политики конфиденциальности
+                                    </a>
                                 </div>
-                                <div className="form-group">
-                                    <button className="btn btn-primary w-100" type="submit"><span>Отправить заявку</span></button>
-                                </div>
-                                <div className="form-comment">
-                                    <div className="form-agreement">
-                Я даю согласие <a href="#" data-popup="popup-agreement">на обработку персональных данных</a> и принимаю
-                <a href="#" data-popup="popup-privacy-policy">условия Политики конфиденциальности</a>
-            </div>
-                                </div>
-                            </form>
-                        </div>
+                            </div>
+                        </form>
                     </div>
-                        <div className="popup -short" id="stock-212571">
-                        <div className="popup__content">
-                            <div className="popup__title popup__title--small">Автокредитование по государственным программам!</div>
-                            <div className="popup__text mb-3">У нас можно купить автомобиль с поддержкой государства.</div>
-                            <form action="#" method="post" className="form needs-validation"
-                                data-analytics-form-id="stock-212571"
-                                noValidate autoComplete="off">
-                                <input type="hidden" name="name" value="Попап. Сток попап. "/>
-                                <input type="hidden" name="id" value=""/>
-                                <input type="hidden" name="property_mark"
-                                    value=""/>
-                                <input type="hidden" name="property_model"
-                                    value=""/>
-                                <div className="form-group">
-                                    <label htmlFor="stock-212571-phone" className="visually-hidden">Телефон</label>
-                                    <input className="form-control" required data-validate type="tel" autoComplete="off"
-                                        id="stock-212571-phone" name="property_phone" placeholder="+7"/>
+                </div>
+                <div className="popup -short" id="stock-202679">
+                    <div className="popup__content">
+                        <div className="popup__title popup__title--small">Ограниченная партия автомобилей</div>
+                        <div className="popup__text mb-3">Успейте забронировать с максимальной выгодой</div>
+                        <form action="#" method="post" className="form needs-validation" data-analytics-form-id="stock-202679" noValidate autoComplete="off">
+                            <input type="hidden" name="name" value="Попап. Сток попап. " />
+                            <input type="hidden" name="id" value="" />
+                            <input type="hidden" name="property_mark" value="" />
+                            <input type="hidden" name="property_model" value="" />
+                            <div className="form-group">
+                                <label htmlFor="stock-202679-phone" className="visually-hidden">
+                                    Телефон
+                                </label>
+                                <input
+                                    className="form-control"
+                                    required
+                                    data-validate
+                                    type="tel"
+                                    autoComplete="off"
+                                    id="stock-202679-phone"
+                                    name="property_phone"
+                                    placeholder="+7"
+                                />
+                            </div>
+                            <div className="form-group">
+                                <button className="btn btn-primary w-100" type="submit">
+                                    <span>Отправить заявку</span>
+                                </button>
+                            </div>
+                            <div className="form-comment">
+                                <div className="form-agreement">
+                                    Я даю согласие{' '}
+                                    <a href="#" data-popup="popup-agreement">
+                                        на обработку персональных данных
+                                    </a>{' '}
+                                    и принимаю
+                                    <a href="#" data-popup="popup-privacy-policy">
+                                        условия Политики конфиденциальности
+                                    </a>
                                 </div>
-                                <div className="form-group">
-                                    <button className="btn btn-primary w-100" type="submit"><span>Отправить заявку</span></button>
-                                </div>
-                                <div className="form-comment">
-                                    <div className="form-agreement">
-                Я даю согласие <a href="#" data-popup="popup-agreement">на обработку персональных данных</a> и принимаю
-                <a href="#" data-popup="popup-privacy-policy">условия Политики конфиденциальности</a>
-            </div>
-                                </div>
-                            </form>
-                        </div>
+                            </div>
+                        </form>
                     </div>
-                        <div className="popup -short" id="stock-212569">
-                        <div className="popup__content">
-                            <div className="popup__title popup__title--small">Специальное предложение!</div>
-                            <div className="popup__text mb-3">Успейте купить новый автомобиль по максимально низкой цене.</div>
-                            <form action="#" method="post" className="form needs-validation"
-                                data-analytics-form-id="stock-212569"
-                                noValidate autoComplete="off">
-                                <input type="hidden" name="name" value="Попап. Сток попап. "/>
-                                <input type="hidden" name="id" value=""/>
-                                <input type="hidden" name="property_mark"
-                                    value=""/>
-                                <input type="hidden" name="property_model"
-                                    value=""/>
-                                <div className="form-group">
-                                    <label htmlFor="stock-212569-phone" className="visually-hidden">Телефон</label>
-                                    <input className="form-control" required data-validate type="tel" autoComplete="off"
-                                        id="stock-212569-phone" name="property_phone" placeholder="+7"/>
+                </div>
+                <div className="popup -short" id="stock-202654">
+                    <div className="popup__content">
+                        <div className="popup__title popup__title--small">Дарим подарки</div>
+                        <div className="popup__text mb-3">Успейте купить автомобиль максимально выгодно.</div>
+                        <form action="#" method="post" className="form needs-validation" data-analytics-form-id="stock-202654" noValidate autoComplete="off">
+                            <input type="hidden" name="name" value="Попап. Сток попап. " />
+                            <input type="hidden" name="id" value="" />
+                            <input type="hidden" name="property_mark" value="" />
+                            <input type="hidden" name="property_model" value="" />
+                            <div className="form-group">
+                                <label htmlFor="stock-202654-phone" className="visually-hidden">
+                                    Телефон
+                                </label>
+                                <input
+                                    className="form-control"
+                                    required
+                                    data-validate
+                                    type="tel"
+                                    autoComplete="off"
+                                    id="stock-202654-phone"
+                                    name="property_phone"
+                                    placeholder="+7"
+                                />
+                            </div>
+                            <div className="form-group">
+                                <button className="btn btn-primary w-100" type="submit">
+                                    <span>Отправить заявку</span>
+                                </button>
+                            </div>
+                            <div className="form-comment">
+                                <div className="form-agreement">
+                                    Я даю согласие{' '}
+                                    <a href="#" data-popup="popup-agreement">
+                                        на обработку персональных данных
+                                    </a>{' '}
+                                    и принимаю
+                                    <a href="#" data-popup="popup-privacy-policy">
+                                        условия Политики конфиденциальности
+                                    </a>
                                 </div>
-                                <div className="form-group">
-                                    <button className="btn btn-primary w-100" type="submit"><span>Отправить заявку</span></button>
-                                </div>
-                                <div className="form-comment">
-                                    <div className="form-agreement">
-                Я даю согласие <a href="#" data-popup="popup-agreement">на обработку персональных данных</a> и принимаю
-                <a href="#" data-popup="popup-privacy-policy">условия Политики конфиденциальности</a>
-            </div>
-                                </div>
-                            </form>
-                        </div>
+                            </div>
+                        </form>
                     </div>
-                        <div className="popup -short" id="stock-212568">
-                        <div className="popup__content">
-                            <div className="popup__title popup__title--small">Мы открылись!</div>
-                            <div className="popup__text mb-3">Только сейчас! В честь открытия мы дарим подарки:
-            <ul>
-            <li>видеорегистратор,</li>
-            <li>аудиосистему,</li>
-            <li>парктроники,</li>
-            <li>коврики!</li>
-            </ul></div>
-                            <form action="#" method="post" className="form needs-validation"
-                                data-analytics-form-id="stock-212568"
-                                noValidate autoComplete="off">
-                                <input type="hidden" name="name" value="Попап. Сток попап. "/>
-                                <input type="hidden" name="id" value=""/>
-                                <input type="hidden" name="property_mark"
-                                    value=""/>
-                                <input type="hidden" name="property_model"
-                                    value=""/>
-                                <div className="form-group">
-                                    <label htmlFor="stock-212568-phone" className="visually-hidden">Телефон</label>
-                                    <input className="form-control" required data-validate type="tel" autoComplete="off"
-                                        id="stock-212568-phone" name="property_phone" placeholder="+7"/>
+                </div>
+                <div className="popup -short" id="stock-202647">
+                    <div className="popup__content">
+                        <div className="popup__title popup__title--small">Воспользуйтесь услугой TRADE-IN</div>
+                        <div className="popup__text mb-3">Быстрый и надежный способ обменять старый автомобиль на новый c дополнительной выгодой.</div>
+                        <form action="#" method="post" className="form needs-validation" data-analytics-form-id="stock-202647" noValidate autoComplete="off">
+                            <input type="hidden" name="name" value="Попап. Сток попап. " />
+                            <input type="hidden" name="id" value="" />
+                            <input type="hidden" name="property_mark" value="" />
+                            <input type="hidden" name="property_model" value="" />
+                            <div className="form-group">
+                                <label htmlFor="stock-202647-phone" className="visually-hidden">
+                                    Телефон
+                                </label>
+                                <input
+                                    className="form-control"
+                                    required
+                                    data-validate
+                                    type="tel"
+                                    autoComplete="off"
+                                    id="stock-202647-phone"
+                                    name="property_phone"
+                                    placeholder="+7"
+                                />
+                            </div>
+                            <div className="form-group">
+                                <button className="btn btn-primary w-100" type="submit">
+                                    <span>Отправить заявку</span>
+                                </button>
+                            </div>
+                            <div className="form-comment">
+                                <div className="form-agreement">
+                                    Я даю согласие{' '}
+                                    <a href="#" data-popup="popup-agreement">
+                                        на обработку персональных данных
+                                    </a>{' '}
+                                    и принимаю
+                                    <a href="#" data-popup="popup-privacy-policy">
+                                        условия Политики конфиденциальности
+                                    </a>
                                 </div>
-                                <div className="form-group">
-                                    <button className="btn btn-primary w-100" type="submit"><span>Отправить заявку</span></button>
-                                </div>
-                                <div className="form-comment">
-                                    <div className="form-agreement">
-                Я даю согласие <a href="#" data-popup="popup-agreement">на обработку персональных данных</a> и принимаю
-                <a href="#" data-popup="popup-privacy-policy">условия Политики конфиденциальности</a>
-            </div>
-                                </div>
-                            </form>
-                        </div>
+                            </div>
+                        </form>
                     </div>
-                        <div className="popup -short" id="stock-205771">
-                        <div className="popup__content">
-                            <div className="popup__title popup__title--small">Большой выбор автомобилей в наличии</div>
-                            <div className="popup__text mb-3">Дополнительная выгода при покупке в этом месяце, оставьте заявку и узнайте подробности акции.
+                </div>
             </div>
-                            <form action="#" method="post" className="form needs-validation"
-                                data-analytics-form-id="stock-205771"
-                                noValidate autoComplete="off">
-                                <input type="hidden" name="name" value="Попап. Сток попап. "/>
-                                <input type="hidden" name="id" value=""/>
-                                <input type="hidden" name="property_mark"
-                                    value=""/>
-                                <input type="hidden" name="property_model"
-                                    value=""/>
-                                <div className="form-group">
-                                    <label htmlFor="stock-205771-phone" className="visually-hidden">Телефон</label>
-                                    <input className="form-control" required data-validate type="tel" autoComplete="off"
-                                        id="stock-205771-phone" name="property_phone" placeholder="+7"/>
-                                </div>
-                                <div className="form-group">
-                                    <button className="btn btn-primary w-100" type="submit"><span>Отправить заявку</span></button>
-                                </div>
-                                <div className="form-comment">
-                                    <div className="form-agreement">
-                Я даю согласие <a href="#" data-popup="popup-agreement">на обработку персональных данных</a> и принимаю
-                <a href="#" data-popup="popup-privacy-policy">условия Политики конфиденциальности</a>
-            </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                        <div className="popup -short" id="stock-205731">
-                        <div className="popup__content">
-                            <div className="popup__title popup__title--small">Оставьте заявку</div>
-                            <div className="popup__text mb-3"><p>Наши менеджеры свяжутся с Вами в ближайшее время!</p></div>
-                            <form action="#" method="post" className="form needs-validation"
-                                data-analytics-form-id="stock-205731"
-                                noValidate autoComplete="off">
-                                <input type="hidden" name="name" value="Попап. Сток попап. "/>
-                                <input type="hidden" name="id" value=""/>
-                                <input type="hidden" name="property_mark"
-                                    value=""/>
-                                <input type="hidden" name="property_model"
-                                    value=""/>
-                                <div className="form-group">
-                                    <label htmlFor="stock-205731-phone" className="visually-hidden">Телефон</label>
-                                    <input className="form-control" required data-validate type="tel" autoComplete="off"
-                                        id="stock-205731-phone" name="property_phone" placeholder="+7"/>
-                                </div>
-                                <div className="form-group">
-                                    <button className="btn btn-primary w-100" type="submit"><span>Отправить заявку</span></button>
-                                </div>
-                                <div className="form-comment">
-                                    <div className="form-agreement">
-                Я даю согласие <a href="#" data-popup="popup-agreement">на обработку персональных данных</a> и принимаю
-                <a href="#" data-popup="popup-privacy-policy">условия Политики конфиденциальности</a>
-            </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                        <div className="popup -short" id="stock-203507">
-                        <div className="popup__content">
-                            <div className="popup__title popup__title--small">Дарим подарки!</div>
-                            <div className="popup__text mb-3">Топливная карта и другие подарки при покупки в этом месяце.</div>
-                            <form action="#" method="post" className="form needs-validation"
-                                data-analytics-form-id="stock-203507"
-                                noValidate autoComplete="off">
-                                <input type="hidden" name="name" value="Попап. Сток попап. "/>
-                                <input type="hidden" name="id" value=""/>
-                                <input type="hidden" name="property_mark"
-                                    value=""/>
-                                <input type="hidden" name="property_model"
-                                    value=""/>
-                                <div className="form-group">
-                                    <label htmlFor="stock-203507-phone" className="visually-hidden">Телефон</label>
-                                    <input className="form-control" required data-validate type="tel" autoComplete="off"
-                                        id="stock-203507-phone" name="property_phone" placeholder="+7"/>
-                                </div>
-                                <div className="form-group">
-                                    <button className="btn btn-primary w-100" type="submit"><span>Отправить заявку</span></button>
-                                </div>
-                                <div className="form-comment">
-                                    <div className="form-agreement">
-                Я даю согласие <a href="#" data-popup="popup-agreement">на обработку персональных данных</a> и принимаю
-                <a href="#" data-popup="popup-privacy-policy">условия Политики конфиденциальности</a>
-            </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                        <div className="popup -short" id="stock-203504">
-                        <div className="popup__content">
-                            <div className="popup__title popup__title--small">Заявка на скидку</div>
-                            <div className="popup__text mb-3">заполните форму и получите дополнительную скидку при покупке авто</div>
-                            <form action="#" method="post" className="form needs-validation"
-                                data-analytics-form-id="stock-203504"
-                                noValidate autoComplete="off">
-                                <input type="hidden" name="name" value="Попап. Сток попап. "/>
-                                <input type="hidden" name="id" value=""/>
-                                <input type="hidden" name="property_mark"
-                                    value=""/>
-                                <input type="hidden" name="property_model"
-                                    value=""/>
-                                <div className="form-group">
-                                    <label htmlFor="stock-203504-phone" className="visually-hidden">Телефон</label>
-                                    <input className="form-control" required data-validate type="tel" autoComplete="off"
-                                        id="stock-203504-phone" name="property_phone" placeholder="+7"/>
-                                </div>
-                                <div className="form-group">
-                                    <button className="btn btn-primary w-100" type="submit"><span>Отправить заявку</span></button>
-                                </div>
-                                <div className="form-comment">
-                                    <div className="form-agreement">
-                Я даю согласие <a href="#" data-popup="popup-agreement">на обработку персональных данных</a> и принимаю
-                <a href="#" data-popup="popup-privacy-policy">условия Политики конфиденциальности</a>
-            </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                        <div className="popup -short" id="stock-202700">
-                        <div className="popup__content">
-                            <div className="popup__title popup__title--small">Дни максимальных скидок!</div>
-                            <div className="popup__text mb-3">Выгода до 850 тыс.руб. и другие подарки</div>
-                            <form action="#" method="post" className="form needs-validation"
-                                data-analytics-form-id="stock-202700"
-                                noValidate autoComplete="off">
-                                <input type="hidden" name="name" value="Попап. Сток попап. "/>
-                                <input type="hidden" name="id" value=""/>
-                                <input type="hidden" name="property_mark"
-                                    value=""/>
-                                <input type="hidden" name="property_model"
-                                    value=""/>
-                                <div className="form-group">
-                                    <label htmlFor="stock-202700-phone" className="visually-hidden">Телефон</label>
-                                    <input className="form-control" required data-validate type="tel" autoComplete="off"
-                                        id="stock-202700-phone" name="property_phone" placeholder="+7"/>
-                                </div>
-                                <div className="form-group">
-                                    <button className="btn btn-primary w-100" type="submit"><span>Отправить заявку</span></button>
-                                </div>
-                                <div className="form-comment">
-                                    <div className="form-agreement">
-                Я даю согласие <a href="#" data-popup="popup-agreement">на обработку персональных данных</a> и принимаю
-                <a href="#" data-popup="popup-privacy-policy">условия Политики конфиденциальности</a>
-            </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                        <div className="popup -short" id="stock-202679">
-                        <div className="popup__content">
-                            <div className="popup__title popup__title--small">Ограниченная партия автомобилей</div>
-                            <div className="popup__text mb-3">Успейте забронировать с максимальной выгодой</div>
-                            <form action="#" method="post" className="form needs-validation"
-                                data-analytics-form-id="stock-202679"
-                                noValidate autoComplete="off">
-                                <input type="hidden" name="name" value="Попап. Сток попап. "/>
-                                <input type="hidden" name="id" value=""/>
-                                <input type="hidden" name="property_mark"
-                                    value=""/>
-                                <input type="hidden" name="property_model"
-                                    value=""/>
-                                <div className="form-group">
-                                    <label htmlFor="stock-202679-phone" className="visually-hidden">Телефон</label>
-                                    <input className="form-control" required data-validate type="tel" autoComplete="off"
-                                        id="stock-202679-phone" name="property_phone" placeholder="+7"/>
-                                </div>
-                                <div className="form-group">
-                                    <button className="btn btn-primary w-100" type="submit"><span>Отправить заявку</span></button>
-                                </div>
-                                <div className="form-comment">
-                                    <div className="form-agreement">
-                Я даю согласие <a href="#" data-popup="popup-agreement">на обработку персональных данных</a> и принимаю
-                <a href="#" data-popup="popup-privacy-policy">условия Политики конфиденциальности</a>
-            </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                        <div className="popup -short" id="stock-202654">
-                        <div className="popup__content">
-                            <div className="popup__title popup__title--small">Дарим подарки</div>
-                            <div className="popup__text mb-3">Успейте купить автомобиль максимально выгодно.</div>
-                            <form action="#" method="post" className="form needs-validation"
-                                data-analytics-form-id="stock-202654"
-                                noValidate autoComplete="off">
-                                <input type="hidden" name="name" value="Попап. Сток попап. "/>
-                                <input type="hidden" name="id" value=""/>
-                                <input type="hidden" name="property_mark"
-                                    value=""/>
-                                <input type="hidden" name="property_model"
-                                    value=""/>
-                                <div className="form-group">
-                                    <label htmlFor="stock-202654-phone" className="visually-hidden">Телефон</label>
-                                    <input className="form-control" required data-validate type="tel" autoComplete="off"
-                                        id="stock-202654-phone" name="property_phone" placeholder="+7"/>
-                                </div>
-                                <div className="form-group">
-                                    <button className="btn btn-primary w-100" type="submit"><span>Отправить заявку</span></button>
-                                </div>
-                                <div className="form-comment">
-                                    <div className="form-agreement">
-                Я даю согласие <a href="#" data-popup="popup-agreement">на обработку персональных данных</a> и принимаю
-                <a href="#" data-popup="popup-privacy-policy">условия Политики конфиденциальности</a>
-            </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                        <div className="popup -short" id="stock-202647">
-                        <div className="popup__content">
-                            <div className="popup__title popup__title--small">Воспользуйтесь услугой TRADE-IN</div>
-                            <div className="popup__text mb-3">Быстрый и надежный способ обменять старый автомобиль на новый c дополнительной выгодой.</div>
-                            <form action="#" method="post" className="form needs-validation"
-                                data-analytics-form-id="stock-202647"
-                                noValidate autoComplete="off">
-                                <input type="hidden" name="name" value="Попап. Сток попап. "/>
-                                <input type="hidden" name="id" value=""/>
-                                <input type="hidden" name="property_mark"
-                                    value=""/>
-                                <input type="hidden" name="property_model"
-                                    value=""/>
-                                <div className="form-group">
-                                    <label htmlFor="stock-202647-phone" className="visually-hidden">Телефон</label>
-                                    <input className="form-control" required data-validate type="tel" autoComplete="off"
-                                        id="stock-202647-phone" name="property_phone" placeholder="+7"/>
-                                </div>
-                                <div className="form-group">
-                                    <button className="btn btn-primary w-100" type="submit"><span>Отправить заявку</span></button>
-                                </div>
-                                <div className="form-comment">
-                                    <div className="form-agreement">
-                Я даю согласие <a href="#" data-popup="popup-agreement">на обработку персональных данных</a> и принимаю
-                <a href="#" data-popup="popup-privacy-policy">условия Политики конфиденциальности</a>
-            </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                
-            </div>
-
         </>
-    )
-}
+    );
+};
 
 export default Footer;

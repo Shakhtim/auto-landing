@@ -1,12 +1,12 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Home from './pages/Home/index.tsx';
+import Home from './pages/Home/index';
 import { Provider } from 'react-redux';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import store from './store.ts';
-import Layout from './pages/Layout/index.tsx';
-import AdminMain from './admin/View/index.tsx';
-import PrivateRoute from './components/PrivateRoute/index.tsx';
+import store from './store';
+import Layout from './pages/Layout/index';
+import AdminMain from './admin/View/index';
+import PrivateRoute from './components/PrivateRoute/index';
+import Auth from './admin/Auth';
 
 const routes = createBrowserRouter([
     {
@@ -16,6 +16,10 @@ const routes = createBrowserRouter([
             {
                 index: true,
                 element: <Home />,
+            },
+            {
+                path: '/auth',
+                element: <Auth />,
             },
         ],
     },

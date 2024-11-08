@@ -1,19 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import './Auth.scss';
-import bemCreator from '../../components/bemCreator.ts';
 import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '@mui/material';
 import TextField from '@mui/material/TextField';
-import { INITIAL_STATE } from './utils.ts';
-import { useDispatch } from "../../store.ts"; // Импортируйте ваш типизированный useDispatch
-import { INPUTS_NAME } from '../../types.ts';
-import { authAdmin, selectIsAuthenticated } from '../../redux/admin/index.ts';
-import { validateErrors, validateLogin, validatePassword } from '../../scripts/utils.ts';
-import { PAuth } from '../../redux/admin/types.ts';
+import { INITIAL_STATE } from './utils';
+import { useDispatch } from '../../store'; // Импортируйте ваш типизированный useDispatch
+import { INPUTS_NAME } from '../../utils/types';
+import { authAdmin, selectIsAuthenticated } from '../../redux/admin/index';
+import { validateErrors, validateLogin, validatePassword } from '../../utils';
+import { PAuth } from '../../redux/admin/types';
 import { useSelector } from 'react-redux';
-import CreateAdmin from '../Create/index.tsx';
-
-const cn = bemCreator('page-auth');
+import CreateAdmin from '../Create/index';
 
 const Auth = () => {
     const [formValues, setFormValues] = useState(INITIAL_STATE);
@@ -21,7 +18,7 @@ const Auth = () => {
     const isAuthenticated = useSelector(selectIsAuthenticated);
     const [authError, setAuthError] = useState('');
 
-    const dispatch = useDispatch(); // Используем типизированный useDispatch 
+    const dispatch = useDispatch(); // Используем типизированный useDispatch
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -57,26 +54,26 @@ const Auth = () => {
 
     const handleSubmit = async () => {
         const isValid = validateErrors(formErrors);
- if (!isValid) return;
+        if (!isValid) return;
 
         const payload: PAuth = {
             login: formValues.login,
             password: formValues.password,
         };
-    
+
         const resultAction = await dispatch(authAdmin(payload));
-    
+
         // Проверяем, был ли thunk выполнен успешно
         if (authAdmin.fulfilled.match(resultAction)) {
             const { token } = resultAction.payload; // Получаем токен из результата
             // Здесь вы можете сохранить токен в localStorage или в Redux
-            localStorage.setItem('token', token); // Сохранение токена 
+            localStorage.setItem('token', token); // Сохранение токена
         } else {
             setAuthError('Неправильный логин или пароль');
         }
     };
 
-    // Обработчик нажатия клавиш 
+    // Обработчик нажатия клавиш
     const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
         if (event.key === 'Enter') {
             handleSubmit();
@@ -85,22 +82,23 @@ const Auth = () => {
 
     return (
         <div className="page-auth">
-            <div className={cn('wrapper')}>
+            <div className="wrapper">
                 <h2>Авторизация</h2>
-                <div className={cn('inputs')}>
+                <div className="inputs">
                     <TextField
                         onChange={handleChange}
-                        onKeyDown={handleKeyDown} // Добавляем обработчик нажатия клавиш 
+                        onKeyDown={handleKeyDown} // Добавляем обработчик нажатия клавиш
                         value={formValues.login}
                         name="login"
                         helperText={formErrors.login}
                         error={!!formErrors.login}
                         label="Логин"
                         variant="outlined"
-                        fullWidth />
+                        fullWidth
+                    />
                     <TextField
                         onChange={handleChange}
-                        onKeyDown={handleKeyDown} // Добавляем обработчик нажатия клавиш 
+                        onKeyDown={handleKeyDown} // Добавляем обработчик нажатия клавиш
                         value={formValues.password}
                         name="password"
                         type="password"
@@ -112,7 +110,7 @@ const Auth = () => {
                     />
                 </div>
 
-                <div className={cn('Button')}>
+                <div className="Button">
                     <Button onClick={handleSubmit}>Войти</Button>
                 </div>
                 <div>

@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { createAdmin, selectCurrentAdmin, selectIsAuthenticated } from '../../redux/admin/index.ts';
-import { AppDispatch } from '../../store.ts';
+import { createAdmin, selectCurrentAdmin, selectIsAuthenticated } from '../../redux/admin';
+import { AppDispatch } from '../../store';
+import axios, { AxiosError } from 'axios';
+interface ErrorResponse {
+    errorMessage: string;
+}
 
 const CreateAdmin = () => {
     const dispatch = useDispatch<AppDispatch>();
@@ -15,7 +19,7 @@ const CreateAdmin = () => {
     const [username, setName] = useState('');
     const [surname, setSurname] = useState('');
 
-    const handleCreateAdmin = async (e) => {
+    const handleCreateAdmin = async (e: React.MouseEvent<HTMLFormElement>) => {
         e.preventDefault();
         setError('');
         setSuccess('');
@@ -34,14 +38,14 @@ const CreateAdmin = () => {
             setName('');
             setSurname('');
         } catch (err) {
-            if (err.response && err.response.data && err.response.data.errorMessage) {
-                setError(err.response.data.errorMessage);
+            const errorResponse = err as AxiosError<ErrorResponse>;
+            if (errorResponse.response && errorResponse.response.data && errorResponse.response.data.errorMessage) {
+                setError(errorResponse.response.data.errorMessage);
             } else {
                 setError('Ошибка при создании администратора');
             }
         }
     };
-
 
     return (
         <div>
@@ -49,38 +53,23 @@ const CreateAdmin = () => {
             <form onSubmit={handleCreateAdmin}>
                 <div>
                     <label>Логин:</label>
-                    <input type="text"
-                        value={login}
-                        onChange={(e) => setLogin(e.target.value)}
-                        required />
+                    <input type="text" value={login} onChange={e => setLogin(e.target.value)} required />
                 </div>
                 <div>
                     <label>Пароль:</label>
-                    <input type="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        required />
+                    <input type="password" value={password} onChange={e => setPassword(e.target.value)} required />
                 </div>
                 <div>
                     <label>Email:</label>
-                    <input type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required />
+                    <input type="email" value={email} onChange={e => setEmail(e.target.value)} required />
                 </div>
                 <div>
                     <label>Имя:</label>
-                    <input type="text"
-                        value={username}
-                        onChange={(e) => setName(e.target.value)}
-                        required />
+                    <input type="text" value={username} onChange={e => setName(e.target.value)} required />
                 </div>
                 <div>
                     <label>Фамилия:</label>
-                    <input type="text"
-                        value={surname}
-                        onChange={(e) => setSurname(e.target.value)}
-                        required />
+                    <input type="text" value={surname} onChange={e => setSurname(e.target.value)} required />
                 </div>
                 <button type="submit">Создать администратора</button>
             </form>

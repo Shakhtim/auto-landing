@@ -1,14 +1,13 @@
-import React from "react";
-import Footer from "../../components/Footer/index.tsx";
-import Home from "../Home/index.tsx";
+import { Outlet } from 'react-router-dom';
+import Footer from '../../components/Footer';
 
 const Layout = () => {
     return (
-    <>
-        <Home/>
-        <Footer/>
-    </>
-);
-}
- 
+        <>
+            <Outlet />
+            <Footer />
+        </>
+    );
+};
+
 export default Layout;
