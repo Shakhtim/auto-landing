@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { useDispatch as useReduxDispatch } from 'react-redux';
 import admin from './redux/admin';
+import order from './redux/order';
 
 const store = configureStore({
     reducer: {
         admin,
+        order,
     },
 });
 

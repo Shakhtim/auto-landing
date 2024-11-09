@@ -14,7 +14,6 @@ const initialState: AdminState = {
 // Асинхронное действие для аутентификации администратора
 export const authAdmin = createAsyncThunk<AuthResponse, PAuth>('admin/auth', async (payload: PAuth): Promise<AuthResponse> => {
     const response = await axios.post(BASE_URL + '/admin/auth', payload);
-
     if (response?.data?.token) {
         localStorage.setItem('token', response.data.token);
     }

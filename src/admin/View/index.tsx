@@ -42,7 +42,7 @@ const AdminMain = () => {
                 <div className="container">
                     <SideBar></SideBar>
                     <div className="adminMain__content-info">
-                        {currentPath === '/admin' && <h3>Главная страница админа</h3>}
+                        {currentPath === '/admin' && <h3>Главная админ</h3>}
                         <Outlet />
                     </div>
                 </div>

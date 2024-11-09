@@ -7,6 +7,10 @@ import Layout from './pages/Layout/index';
 import AdminMain from './admin/View/index';
 import PrivateRoute from './components/PrivateRoute/index';
 import Auth from './admin/Auth';
+import OrdersList from './admin/Orders/OrdersList';
+import OrdersJson from './admin/Orders/OrdersJson';
+import Setting from './admin/Setting';
+const apiUrl = process.env.REACT_APP_API_URL;
 
 const routes = createBrowserRouter([
     {
@@ -26,7 +30,20 @@ const routes = createBrowserRouter([
     {
         path: '/admin',
         element: <PrivateRoute element={<AdminMain />} />,
-        children: [{}],
+        children: [
+            {
+                path: 'orders',
+                element: <OrdersList />,
+            },
+            {
+                path: 'setting',
+                element: <Setting />,
+            },
+        ],
+    },
+    {
+        path: `/api`,
+        element: <OrdersJson />,
     },
 ]);
 

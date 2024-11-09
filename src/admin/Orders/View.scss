@@ -1,0 +1,123 @@
+.adminOrders {
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        background-color: #e8e8e8;
+    }
+    &__body {
+        padding: 15px;
+        overflow: auto;
+        .pagination-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+        button {
+            &:hover {
+                color: #fff;
+            }
+        }
+        table {
+            border: none;
+            thead {
+                overflow: auto;
+            }
+            tbody {
+                tr {
+                    td {
+                        max-width: 200px;
+                        &#salonAction {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 20px;
+                            border: none;
+                            button {
+                                background: none;
+                                border: none;
+                                &:hover {
+                                    background-color: red;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > td {
+    border: 1px solid #f4f4f4;
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+.table-bordered {
+    border-collapse: collapse; /* Убирает двойные границы между ячейками */
+    width: 100%; /* Задает ширину таблицы */
+}
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid #ddd; /* Граница для ячеек */
+    padding: 8px; /* Отступы внутри ячеек */
+    max-width: 200px;
+    overflow: auto;
+}
+.table-bordered th {
+    background-color: #f2f2f2; /* Цвет фона для заголовков */
+    text-align: left; /* Выравнивание текста в заголовках */
+}
+.table-striped tr:nth-child(even) {
+    background-color: #f9f9f9; /* Цвет фона для четных строк */
+}
+.table-striped tr:hover {
+    background-color: #f1f1f1; /* Цвет фона для строки при наведении */
+}
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid #ddd; /* Граница для ячеек */
+    padding: 8px; /* Отступы внутри ячеек */
+    // white-space: nowrap; /* Запрет на перенос текста */
+}
+#orderPhone {
+    min-width: 230px; /* Минимальная ширина для столбца телефона */
+}
+.table-bordered td {
+    overflow: hidden; /* Убедитесь, что текст не вылезает за пределы ячеек */
+    white-space: nowrap; /* Запретите перенос строк */
+    position: relative; /* Для позиционирования псевдоэлементов */
+}
+.table-bordered td {
+    max-width: 200px; /* Установите максимальную ширину для div */
+    overflow: hidden; /* Скрыть переполнение по умолчанию */
+    white-space: nowrap; /* Запретите перенос строк внутри div */
+    transition: overflow 0.3s; /* Плавный переход для overflow */
+}
+/* Полоса прокрутки для WebKit-браузеров */
+.table-bordered td:hover div {
+    overflow: auto; /* Показывать прокрутку при наведении */
+}
+/* Стили для полосы прокрутки в WebKit-браузерах */
+.table-bordered td div::-webkit-scrollbar {
+    width: 6px; /* Ширина полосы прокрутки */
+    opacity: 0; /* Скрыть полосу прокрутки по умолчанию */
+    transition: opacity 0.3s; /* Плавный переход для opacity */
+}
+.table-bordered td:hover div::-webkit-scrollbar {
+    opacity: 1; /* Показать полосу прокрутки при наведении */
+}
+.table-bordered td div::-webkit-scrollbar-thumb {
+    background: gray; /* Цвет полосы прокрутки */
+    border-radius: 3px; /* Закругление краев полосы прокрутки */
+}
+.table-bordered td div::-webkit-scrollbar-thumb:hover {
+    background: gray; /* Цвет при наведении */
+}
