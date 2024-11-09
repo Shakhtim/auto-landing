@@ -4,7 +4,7 @@ import multer from 'multer';
 import autosalonModel from '../../../model/autosalonModel.js';
 
 const router = express.Router();
-const upload = multer({ dest: '../../../uploads/autosalons/' }); 
+const upload = multer({ dest: '../../../uploads/autosalons/' });
 
 const editAutosalon = expressAsyncHandler(async (req, res) => {
     const { _id } = req.params;
@@ -21,7 +21,7 @@ const editAutosalon = expressAsyncHandler(async (req, res) => {
             return res.status(404).send({ message: 'Автосалон не найден' });
         }
 
-        // Обновление полей 
+        // Обновление полей
         autosalon.status = status || autosalon.status;
         autosalon.nameSalon = nameSalon || autosalon.nameSalon;
         // autosalon.image = image || autosalon.image;

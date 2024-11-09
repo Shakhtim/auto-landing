@@ -2,7 +2,7 @@ import expressAsyncHandler from 'express-async-handler';
 import autosalonModel from '../../../model/autosalonModel.js';
 
 const createAutosalon = expressAsyncHandler(async (req, res) => {
-    const { status,nameSalon, city, rating, address, phone, site, schedule, meta_title, meta_description, meta_keywords } = req.body;
+    const { status, nameSalon, city, rating, address, phone, site, schedule, meta_title, meta_description, meta_keywords } = req.body;
     const image = req.file;
 
     if (!image) {
@@ -22,7 +22,8 @@ const createAutosalon = expressAsyncHandler(async (req, res) => {
             meta_title,
             meta_description,
             meta_keywords,
-            image: image.filename });
+            image: image.filename,
+        });
 
         res.status(201).send({ message: 'Автосалон успешно создан!', autosalon: newAutosalon });
     } catch (error) {

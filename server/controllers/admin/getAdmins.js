@@ -1,11 +1,14 @@
-// controllers/admin/getAdmins.js
 import expressAsyncHandler from 'express-async-handler';
-import Admin from '../../model/adminModel.js';
+import { client } from '../../config/db.js';
 
-// @desc    Получить всех администраторов
-// @route   GET /api/admins
-const getAdmins = expressAsyncHandler(async (req, res) => {
-    const admins = await Admin.find({}, '-password'); // Не возвращаем пароль res.json(admins);
+const getOrders = expressAsyncHandler(async (req, res) => {
+    try {
+        const result = await client.query('SELECT * FROM orders');
+        res.status(200).json(result.rows);
+    } catch (error) {
+        console.error('Error fetching orders:', error);
+        res.status(500).json({ message: 'Internal server error' });
+    }
 });
 
-export default getAdmins;
+export default getOrders;

@@ -11,18 +11,16 @@ export interface AdminState {
 
 export enum ROLES {
     ADMIN = 'admin',
-    CUSTOMER = 'customer',
 }
 
 export interface AdminDto {
-    id: number; 
+    id: number;
     login: string;
-    password: string; 
+    password: string;
     username: string;
     surname: string;
     email: string;
 }
-
 
 export interface AuthResponse {
     token: string;

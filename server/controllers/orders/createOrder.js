@@ -1,28 +1,22 @@
-import expressAsyncHandler from 'express-async-handler';
-import orderModel from '../../model/orderModel.js';
+import { client } from '../../config/db.js';
 
-const createOrder = expressAsyncHandler(async (req, res) => {
-    const { id, name, phone, ip, brand, model, configuration, firstPayment, loanTerm, entryPoint, yclid, type } = req.body;
+const createOrder = async orderData => {
+    const { name, phone, ip, brand, model, configuration, firstPayment, loanTerm, entryPoint, yclid, type } = orderData;
+
+    const query = `
+        INSERT INTO orders (name, phone, ip, brand, model, configuration, firstPayment, loanTerm, entryPoint, yclid, type)
+        VALUES (\$1, \$2, \$3, \$4, \$5, \$6, \$7, \$8, \$9, \$10, \$11)
+        RETURNING *;
+    `;
+
+    const values = [name, phone, ip, brand, model, configuration, firstPayment, loanTerm, entryPoint, yclid, type];
+
     try {
-        const newOrder = await orderModel.create({
-            id,
-            name,
-            phone,
-            ip,
-            brand,
-            model,
-            configuration,
-            firstPayment,
-            loanTerm,
-            entryPoint,
-            yclid,
-            type,
-        });
-        res.status(201).send({ message: 'Отзыв успешно создан!', order: newOrder });
+        const result = await client.query(query, values);
+        return result.rows[0];
     } catch (error) {
-        console.error(error);
-        res.status(500).send({ message: 'Ошибка при создании отзыва', error });
+        throw new Error('Error creating order: ' + error.message);
     }
-});
+};
 
 export default createOrder;

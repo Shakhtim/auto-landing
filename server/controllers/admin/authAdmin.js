@@ -1,19 +1,18 @@
 import expressAsyncHandler from 'express-async-handler';
-import Admin from '../../model/adminModel.js';
+import { client } from '../../config/db.js';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
 import dotenv from 'dotenv';
 
-dotenv.config(); // Загружаем переменные окружения
+dotenv.config();
 
-// @desc    Авторизирует администратора
-// @route   POST /api/admin/auth
 const authAdmin = expressAsyncHandler(async (req, res) => {
     const { login, password } = req.body;
 
     try {
         // Проверяем, существует ли администратор с таким логином
-        const admin = await Admin.findOne({ login });
+        const result = await client.query('SELECT * FROM admins WHERE login = $1', [login]);
+        const admin = result.rows[0];
 
         if (!admin) {
             return res.status(401).send({ errorMessage: 'Неправильный логин или пароль' });
@@ -34,13 +33,13 @@ const authAdmin = expressAsyncHandler(async (req, res) => {
 
         // Создаем JWT-токен
         const generateToken = admin => {
-            return jwt.sign({ id: admin._id }, process.env.JWT_SECRET, {
+            return jwt.sign({ id: admin.id }, process.env.JWT_SECRET, {
                 expiresIn: '30d',
             });
         };
 
-        const token = generateToken(admin); // Сохраняем токен в переменной
-        return res.status(200).send({ token, admin: { id: admin._id, login: admin.login } });
+        const token = generateToken(admin);
+        return res.status(200).send({ token, admin: { id: admin.id, login: admin.login } });
     } catch (error) {
         console.error('Ошибка при авторизации администратора:', error);
         return res.status(500).send({ errorMessage: 'Ошибка сервера' });

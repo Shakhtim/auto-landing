@@ -3,13 +3,10 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import adminRoutes from './routes/adminRoutes.js';
 import orderRoutes from './routes/orderRoutes.js';
-import conectDb from './config/db.js';
-import env from 'dotenv';
+import { connectDb } from './config/db.js'; // Исправлено на connectDb
+import dotenv from 'dotenv'; // Исправлено на dotenv
 
-// Получение текущего файла и директории
-console.log(cors);
-
-env.config();
+dotenv.config(); // Исправлено на dotenv
 
 const app = express();
 
@@ -19,7 +16,7 @@ app.use(cors());
 
 const port = process.env.PORT_SERVER || 3001;
 
-conectDb();
+connectDb();
 
 app.use('/admin', adminRoutes);
 app.use('/admin/orders', orderRoutes);
