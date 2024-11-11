@@ -3,7 +3,6 @@
     "version": "0.1.0",
     "private": true,
     "type": "module",
-    "proxy": "http://localhost:3001",
     "dependencies": {
         "@babel/runtime": "^7.26.0",
         "@emotion/react": "^11.13.3",
@@ -73,5 +72,9 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
+    },
+    "devDependencies": {
+        "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+        "react-app-rewired": "^2.2.1"
     }
 }

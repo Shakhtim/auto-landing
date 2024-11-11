@@ -108,34 +108,42 @@ const OrderList = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {currentOrders.map(order => (
-                            <tr key={order.id}>
-                                <td id="orderId">{order.id}</td>
-                                <td id="orderDateCreated">
-                                    <div>{new Date(order.dateCreated).toLocaleDateString()}</div>
-                                    <div style={{ fontSize: 'small', color: '#666' }}>{new Date(order.dateCreated).toLocaleTimeString()}</div>
-                                </td>
-                                <td id="orderName">{order.name}</td>
-                                <td id="orderPhone">{order.phone}</td>
-                                <td id="orderIp">{order.ip}</td>
-                                <td id="orderBrand">{order.brand}</td>
-                                <td id="orderModel">{order.model}</td>
-                                <td id="orderConfiguration">{order.configuration}</td>
-                                <td id="orderFirstPayment">{order.firstPayment}</td>
-                                <td id="orderLoanTerm">{order.loanTerm}</td>
-                                <td id="orderEntryPoint">{order.entryPoint}</td>
-                                <td id="orderYclid">{order.yclid}</td>
-                                <td id="orderType">{order.type}</td>
-                                <td id="orderAction">
-                                    <Link to={`/admin/order/edit/${order.id}`} title="Изменить">
-                                        <i className="fa fa-pencil" aria-hidden="true"></i>
-                                    </Link>
-                                    <button title="Удалить" onClick={() => handleDelete(order.id)}>
-                                        <i className="fa fa-times" aria-hidden="true"></i>
-                                    </button>
+                        {Array.isArray(currentOrders) && currentOrders.length > 0 ? (
+                            currentOrders.map(order => (
+                                <tr key={order.id}>
+                                    <td id="orderId">{order.id}</td>
+                                    <td id="orderDateCreated">
+                                        <div>{new Date(order.dateCreated).toLocaleDateString()}</div>
+                                        <div style={{ fontSize: 'small', color: '#666' }}>{new Date(order.dateCreated).toLocaleTimeString()}</div>
+                                    </td>
+                                    <td id="orderName">{order.name}</td>
+                                    <td id="orderPhone">{order.phone}</td>
+                                    <td id="orderIp">{order.ip}</td>
+                                    <td id="orderBrand">{order.brand}</td>
+                                    <td id="orderModel">{order.model}</td>
+                                    <td id="orderConfiguration">{order.configuration}</td>
+                                    <td id="orderFirstPayment">{order.firstPayment}</td>
+                                    <td id="orderLoanTerm">{order.loanTerm}</td>
+                                    <td id="orderEntryPoint">{order.entryPoint}</td>
+                                    <td id="orderYclid">{order.yclid}</td>
+                                    <td id="orderType">{order.type}</td>
+                                    <td id="orderAction">
+                                        <Link to={`/admin/order/edit/${order.id}`} title="Изменить">
+                                            <i className="fa fa-pencil" aria-hidden="true"></i>
+                                        </Link>
+                                        <button title="Удалить" onClick={() => handleDelete(order.id)}>
+                                            <i className="fa fa-times" aria-hidden="true"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            ))
+                        ) : (
+                            <tr>
+                                <td colSpan={14} style={{ textAlign: 'center', color: 'red' }}>
+                                    Заказы отсутствуют
                                 </td>
                             </tr>
-                        ))}
+                        )}
                     </tbody>
                 </table>
             </div>

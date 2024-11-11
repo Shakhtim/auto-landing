@@ -1,5 +1,6 @@
 //базовый URL
-export const BASE_URL = 'http://localhost:3001';
+// export const BASE_URL = 'http://localhost:3001';
+// export const BASE_URL = 'http://tshakhgn.beget.tech';
 
 //валидация формы
 interface ErrorTexts {

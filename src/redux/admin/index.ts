@@ -1,8 +1,11 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { PAuth, Admin, AdminState, AuthResponse, PRegister } from './types';
-import { BASE_URL } from '../../utils';
+// import { BASE_URL } from '../../utils';
 import { RootState } from '../../store';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 // Дефолтные значения
 const initialState: AdminState = {
@@ -13,7 +16,7 @@ const initialState: AdminState = {
 
 // Асинхронное действие для аутентификации администратора
 export const authAdmin = createAsyncThunk<AuthResponse, PAuth>('admin/auth', async (payload: PAuth): Promise<AuthResponse> => {
-    const response = await axios.post(BASE_URL + '/admin/auth', payload);
+    const response = await axios.post(process.env.PORT_SERVER + '/admin/auth', payload);
     if (response?.data?.token) {
         localStorage.setItem('token', response.data.token);
     }
@@ -30,7 +33,7 @@ export const logoutAdmin = createAsyncThunk('admin/logout', async () => {
 
 // Асинхронное действие для создания администратора
 export const createAdmin = createAsyncThunk('admin/create', async (object: PRegister) => {
-    const response = await axios.post(BASE_URL + '/admin/create', object);
+    const response = await axios.post(process.env.PORT_SERVER + '/admin/create', object);
 
     if (response?.data?.token) {
         localStorage.setItem('userId', String(response?.data?.token));

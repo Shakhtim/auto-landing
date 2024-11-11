@@ -4,7 +4,7 @@ const createOrder = async orderData => {
     const { name, phone, ip, brand, model, configuration, firstPayment, loanTerm, entryPoint, yclid, type } = orderData;
 
     const query = `
-        INSERT INTO orders (name, phone, ip, brand, model, configuration, firstPayment, loanTerm, entryPoint, yclid, type)
+        INSERT INTO orders (name, phone, ip, brand, model, configuration, first_Payment, loan_term, entry_point, yclid, type)
         VALUES (\$1, \$2, \$3, \$4, \$5, \$6, \$7, \$8, \$9, \$10, \$11)
         RETURNING *;
     `;
